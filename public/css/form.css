@@ -1,0 +1,268 @@
+/* Reset de base et styles globaux */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ecf1fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* En-tête du site */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5988ff;
+  padding: 10px 20px;
+  color: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header img {
+  width: 100px;
+  height: auto;
+}
+
+/* Menu de navigation */
+.menu {
+  display: flex;
+  gap: 50px;
+}
+
+/* Hamburger menu pour mobile - initialement caché */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+/* Contenu principal */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container principal pour le contenu */
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #5988ff;
+}
+
+.container p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #666;
+}
+
+/* Styles des formulaires */
+.container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  text-align: left;
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="password"],
+.container input[type="tel"],
+.container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+}
+
+.container input[type="text"]:focus,
+.container input[type="email"]:focus,
+.container input[type="password"]:focus,
+.container input[type="tel"]:focus,
+.container select:focus {
+  border-color: #5988ff;
+  outline: none;
+  background-color: #fff;
+}
+
+.container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5988ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #476dc5;
+}
+
+/* Pied de page */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5988ff;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+/* Media queries améliorées */
+
+/* Écrans larges */
+@media (min-width: 1201px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+/* Tablettes et écrans moyens */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+/* Tablettes */
+@media (max-width: 992px) {
+  header {
+    padding: 10px 15px;
+  }
+  
+  .menu {
+    gap: 30px;
+  }
+  
+  .container h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Petites tablettes et grands mobiles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  header img {
+    margin-bottom: 10px;
+  }
+  
+  .menu {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 576px) {
+  /* Activer le menu hamburger */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .menu {
+    display: none; /* Par défaut caché sur mobile */
+    width: 100%;
+    margin-top: 15px;
+    gap: 10px;
+  }
+  
+  .menu.active {
+    display: flex; /* Afficher quand activé par JS */
+  }
+  
+  .container {
+    padding: 15px;
+    width: 95%;
+  }
+  
+  .container h1 {
+    font-size: 1.5rem;
+  }
+  
+  .container p {
+    font-size: 0.9rem;
+  }
+  
+  .container input[type="text"],
+  .container input[type="email"],
+  .container input[type="password"],
+  .container input[type="tel"],
+  .container select,
+  .container button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 320px) {
+  header img {
+    width: 80px;
+  }
+  
+  .container h1 {
+    font-size: 1.3rem;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+}

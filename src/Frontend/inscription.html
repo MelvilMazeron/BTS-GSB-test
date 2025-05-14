@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Formulaire d'inscription pour rejoindre GSB."
+    />
+    <title>Inscription - GSB</title>
+    <link rel="stylesheet" href="../../public/css/form.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../../public/img/GSB-Logo.png" />
+      <div class="menu">
+        <a href="/">Home</a>
+        <a href="liste.php">Liste</a>
+        <a href="ajout.php">Ajout</a>
+        <a href="connexion.html">Se connecter</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <h1>Formulaire d'inscription</h1>
+        <p>Veuillez remplir les champs ci-dessous pour créer un compte.</p>
+        <form action="../Backend/validation_inscription.php" method="post">
+          <label for="nom">Nom :</label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            placeholder="Entrez votre nom"
+            required
+          />
+
+          <label for="prenom">Prénom :</label>
+          <input
+            type="text"
+            id="prenom"
+            name="prenom"
+            placeholder="Entrez votre prénom"
+            required
+          />
+
+          <label for="mdp">Mot de passe :</label>
+          <input
+            type="password"
+            id="mdp"
+            name="mdp"
+            placeholder="Entrez votre mot de passe"
+            required
+          />
+
+          <label for="confmdp">Confirmer le mot de passe :</label>
+          <input
+            type="password"
+            id="confmdp"
+            name="confmdp"
+            placeholder="Confirmez votre mot de passe"
+            required
+          />
+
+          <label for="mail">Adresse e-mail :</label>
+          <input
+            type="email"
+            id="mail"
+            name="mail"
+            placeholder="Entrez votre adresse e-mail"
+            required
+          />
+
+          <label for="telephone">Numéro de téléphone :</label>
+          <input
+            type="tel"
+            id="telephone"
+            name="telephone"
+            placeholder="Entrez votre numéro de téléphone"
+            required
+          />
+
+          <label for="role">Rôle :</label>
+          <select id="role" name="role" required>
+            <option value="">Sélectionner un rôle</option>
+            <option value="visiteur">Visiteur Médical</option>
+            <option value="delegue">Délégué Régional</option>
+            <option value="responsable">Responsable Secteur</option>
+          </select>
+
+          <button type="submit">Envoyer</button>
+          <p>
+            vous avez déja un compte ? <a href="connexion.html">Se connecter</a>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 GSB Rapports - Tous droits réservés.</p>
+    </footer>
+  </body>
+</html>

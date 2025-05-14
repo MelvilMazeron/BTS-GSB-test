@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Formulaire de connexion pour accéder à l'espace utilisateur de GSB."
+    />
+    <meta name="keywords" content="GSB, connexion, espace utilisateur, login" />
+    <meta name="author" content="GSB" />
+    <title>Connexion - GSB</title>
+    <link rel="stylesheet" href="../../public/css/form.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../../public/img/GSB-Logo.png" />
+      <div class="menu">
+        <a href="/">Home</a>
+        <a href="liste.php">Liste</a>
+        <a href="ajout.php">Ajout</a>
+        <a href="connexion.html">Se connecter</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <h1>Formulaire de connexion</h1>
+        <p>Connectez-vous pour accéder à votre espace utilisateur.</p>
+        <form
+          name="gsb"
+          id="gsb"
+          method="post"
+          action="../Backend/connexion.php"
+        >
+          <label for="pseudo">Nom d'utilisateur :</label>
+          <input
+            type="text"
+            id="pseudo"
+            name="pseudo"
+            placeholder="Rentrez votre identifiant"
+            required
+          />
+
+          <label for="mdp">Mot de passe :</label>
+          <input
+            type="password"
+            id="mdp"
+            name="mdp"
+            placeholder="Rentrez votre mot de passe"
+            required
+          />
+
+          <button type="submit" name="Connexion">Connexion</button>
+        </form>
+        <p>Pas de compte ? <a href="inscription.html">S'inscrire</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 GSB Rapports - Tous droits réservés.</p>
+    </footer>
+  </body>
+</html>
